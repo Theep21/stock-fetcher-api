@@ -1,0 +1,19 @@
+{
+  "install": "pip install -r requirements.txt",
+  "start": "python index.py",
+  "watch": {
+    "ignore": [
+      "\\.pyc$"
+    ],
+    "install": {
+      "include": [
+        "requirements.txt"
+      ]
+    },
+    "restart": {
+      "include": [
+        "index.py"
+      ]
+    }
+  }
+}
