@@ -11,7 +11,6 @@ def get_stock():
     stock = yf.Ticker(ticker)
     stock_info = stock.info
     todays_data = stock.history(period='1d')
-
     stock_data = {
         "symbol": stock_info.get("symbol"),
         "companyName": stock_info.get("longName"),
