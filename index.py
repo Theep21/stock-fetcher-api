@@ -8,7 +8,6 @@ def get_stock():
     ticker = request.args.get('ticker')
     if not ticker:
         return jsonify({'error': 'Ticker is required'}), 400
-
     stock = yf.Ticker(ticker)
     stock_info = stock.info
     todays_data = stock.history(period='1d')
@@ -22,7 +21,6 @@ def get_stock():
         "low": todays_data['Low'][0],
         "logoURL": stock_info.get("logo_url")
     }
-
     return jsonify(stock_data)
 
 if __name__ == '__main__':
