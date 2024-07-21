@@ -1,1 +1,1 @@
-touch Procfile
+web: python index.py
